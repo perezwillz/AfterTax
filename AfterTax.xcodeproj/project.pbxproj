@@ -7,21 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B96AD0E41FFADEB400730C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD0E31FFADEB400730C95 /* AppDelegate.swift */; };
-		B96AD0E61FFADEB400730C95 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD0E51FFADEB400730C95 /* ViewController.swift */; };
+		7A0C2B4C202E13C1003860CC /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C2B4B202E13C1003860CC /* ReceiptViewController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		7A8555312033843500346D53 /* AfterTax.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A85552F2033843500346D53 /* AfterTax.xcdatamodeld */; settings = {COMPILER_FLAGS = "-w"; }; };
+		7A855538203389FB00346D53 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A855537203389FB00346D53 /* CoreDataStack.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		7A85553A20338BFB00346D53 /* AfterTaxConvinience+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A85553920338BFB00346D53 /* AfterTaxConvinience+Initializers.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		B96AD0E41FFADEB400730C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD0E31FFADEB400730C95 /* AppDelegate.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		B96AD0E91FFADEB400730C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96AD0E71FFADEB400730C95 /* Main.storyboard */; };
 		B96AD0EB1FFADEB400730C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96AD0EA1FFADEB400730C95 /* Assets.xcassets */; };
 		B96AD0EE1FFADEB400730C95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96AD0EC1FFADEB400730C95 /* LaunchScreen.storyboard */; };
+		B96AD0FE1FFC37A700730C95 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD0FD1FFC37A700730C95 /* MainViewController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		B96AD1001FFC37C400730C95 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD0FF1FFC37C400730C95 /* DetailViewController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		B96AD1021FFC37FD00730C95 /* TaxPayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD1011FFC37FD00730C95 /* TaxPayer.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		B96AD1041FFC384100730C95 /* TaxpayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD1031FFC384100730C95 /* TaxpayerController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A0C2B4B202E13C1003860CC /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
+		7A8555302033843500346D53 /* AfterTax.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterTax.xcdatamodel; sourceTree = "<group>"; };
+		7A855537203389FB00346D53 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		7A85553920338BFB00346D53 /* AfterTaxConvinience+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AfterTaxConvinience+Initializers.swift"; sourceTree = "<group>"; };
 		B96AD0E01FFADEB400730C95 /* AfterTax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfterTax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96AD0E31FFADEB400730C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B96AD0E51FFADEB400730C95 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B96AD0E81FFADEB400730C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B96AD0EA1FFADEB400730C95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B96AD0ED1FFADEB400730C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B96AD0EF1FFADEB400730C95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96AD0FD1FFC37A700730C95 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B96AD0FF1FFC37C400730C95 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B96AD1011FFC37FD00730C95 /* TaxPayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxPayer.swift; sourceTree = "<group>"; };
+		B96AD1031FFC384100730C95 /* TaxpayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxpayerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +49,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A855532203386DC00346D53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B96AD1011FFC37FD00730C95 /* TaxPayer.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		7A8555332033870B00346D53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B96AD0E71FFADEB400730C95 /* Main.storyboard */,
+				B96AD0FF1FFC37C400730C95 /* DetailViewController.swift */,
+				B96AD0FD1FFC37A700730C95 /* MainViewController.swift */,
+				7A0C2B4B202E13C1003860CC /* ReceiptViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7A8555342033875E00346D53 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B96AD0EC1FFADEB400730C95 /* LaunchScreen.storyboard */,
+			);
+			name = LaunchScreen;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		7A8555352033889000346D53 /* CoreData&Friends */ = {
+			isa = PBXGroup;
+			children = (
+				7A85552F2033843500346D53 /* AfterTax.xcdatamodeld */,
+				7A855537203389FB00346D53 /* CoreDataStack.swift */,
+				7A85553920338BFB00346D53 /* AfterTaxConvinience+Initializers.swift */,
+			);
+			name = "CoreData&Friends";
+			sourceTree = "<group>";
+		};
+		7A855536203388EF00346D53 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B96AD1031FFC384100730C95 /* TaxpayerController.swift */,
+			);
+			name = ModelControllers;
+			sourceTree = "<group>";
+		};
 		B96AD0D71FFADEB300730C95 = {
 			isa = PBXGroup;
 			children = (
@@ -54,11 +114,13 @@
 		B96AD0E21FFADEB400730C95 /* AfterTax */ = {
 			isa = PBXGroup;
 			children = (
+				7A855536203388EF00346D53 /* ModelControllers */,
+				7A8555352033889000346D53 /* CoreData&Friends */,
+				7A8555342033875E00346D53 /* LaunchScreen */,
+				7A8555332033870B00346D53 /* Views */,
+				7A855532203386DC00346D53 /* Models */,
 				B96AD0E31FFADEB400730C95 /* AppDelegate.swift */,
-				B96AD0E51FFADEB400730C95 /* ViewController.swift */,
-				B96AD0E71FFADEB400730C95 /* Main.storyboard */,
 				B96AD0EA1FFADEB400730C95 /* Assets.xcassets */,
-				B96AD0EC1FFADEB400730C95 /* LaunchScreen.storyboard */,
 				B96AD0EF1FFADEB400730C95 /* Info.plist */,
 			);
 			path = AfterTax;
@@ -136,8 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B96AD0E61FFADEB400730C95 /* ViewController.swift in Sources */,
+				7A0C2B4C202E13C1003860CC /* ReceiptViewController.swift in Sources */,
+				B96AD1021FFC37FD00730C95 /* TaxPayer.swift in Sources */,
+				7A8555312033843500346D53 /* AfterTax.xcdatamodeld in Sources */,
+				7A855538203389FB00346D53 /* CoreDataStack.swift in Sources */,
+				B96AD0FE1FFC37A700730C95 /* MainViewController.swift in Sources */,
+				B96AD1041FFC384100730C95 /* TaxpayerController.swift in Sources */,
 				B96AD0E41FFADEB400730C95 /* AppDelegate.swift in Sources */,
+				B96AD1001FFC37C400730C95 /* DetailViewController.swift in Sources */,
+				7A85553A20338BFB00346D53 /* AfterTaxConvinience+Initializers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +280,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -277,8 +346,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3LN6LR5X2;
 				INFOPLIST_FILE = AfterTax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CSGabj.AfterTax;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CSGabj.After-Tax";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -292,8 +362,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K3LN6LR5X2;
 				INFOPLIST_FILE = AfterTax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.CSGabj.AfterTax;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.CSGabj.After-Tax";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -322,6 +393,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7A85552F2033843500346D53 /* AfterTax.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7A8555302033843500346D53 /* AfterTax.xcdatamodel */,
+			);
+			currentVersion = 7A8555302033843500346D53 /* AfterTax.xcdatamodel */;
+			path = AfterTax.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B96AD0D81FFADEB300730C95 /* Project object */;
 }
