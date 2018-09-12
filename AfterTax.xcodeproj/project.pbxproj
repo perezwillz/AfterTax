@@ -11,6 +11,15 @@
 		7A8555312033843500346D53 /* AfterTax.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A85552F2033843500346D53 /* AfterTax.xcdatamodeld */; settings = {COMPILER_FLAGS = "-w"; }; };
 		7A855538203389FB00346D53 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A855537203389FB00346D53 /* CoreDataStack.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		7A85553A20338BFB00346D53 /* AfterTaxConvinience+Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A85553920338BFB00346D53 /* AfterTaxConvinience+Initializers.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		B92EABFF2131CDA200FDAB60 /* SingleSalary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EABFE2131CDA200FDAB60 /* SingleSalary.swift */; };
+		B92EAC012131CDB600FDAB60 /* MarriedSalary.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EAC002131CDB600FDAB60 /* MarriedSalary.swift */; };
+		B92EAC032131CDD200FDAB60 /* SingleSalaryNoStateTax.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EAC022131CDD200FDAB60 /* SingleSalaryNoStateTax.swift */; };
+		B92EAC052131CE3400FDAB60 /* MarriedSalaryNoStateTaxes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EAC042131CE3400FDAB60 /* MarriedSalaryNoStateTaxes.swift */; };
+		B92EAC092131D22700FDAB60 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EAC082131D22700FDAB60 /* Constraints.swift */; };
+		B92EAC0B2131D26B00FDAB60 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EAC0A2131D26B00FDAB60 /* PickerView.swift */; };
+		B92EAC0D2131D4F000FDAB60 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EAC0C2131D4F000FDAB60 /* Animations.swift */; };
+		B92EAC112131D87300FDAB60 /* ReceiptConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EAC102131D87300FDAB60 /* ReceiptConstraints.swift */; };
+		B92EAC132131D89500FDAB60 /* ReceiptAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92EAC122131D89500FDAB60 /* ReceiptAnimations.swift */; };
 		B96AD0E41FFADEB400730C95 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD0E31FFADEB400730C95 /* AppDelegate.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		B96AD0E91FFADEB400730C95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96AD0E71FFADEB400730C95 /* Main.storyboard */; };
 		B96AD0EB1FFADEB400730C95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96AD0EA1FFADEB400730C95 /* Assets.xcassets */; };
@@ -19,6 +28,9 @@
 		B96AD1001FFC37C400730C95 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD0FF1FFC37C400730C95 /* DetailViewController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		B96AD1021FFC37FD00730C95 /* TaxPayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD1011FFC37FD00730C95 /* TaxPayer.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
 		B96AD1041FFC384100730C95 /* TaxpayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96AD1031FFC384100730C95 /* TaxpayerController.swift */; settings = {COMPILER_FLAGS = "-w"; }; };
+		B9AC32F62131C7DF003E9B81 /* MarriedTaxpayerExtenstion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AC32F52131C7DF003E9B81 /* MarriedTaxpayerExtenstion.swift */; };
+		B9AC32F82131C817003E9B81 /* Married&NoSateTaxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AC32F72131C817003E9B81 /* Married&NoSateTaxExtension.swift */; };
+		B9AC32FA2131C869003E9B81 /* Single&NoStateTaxExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AC32F92131C869003E9B81 /* Single&NoStateTaxExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +38,15 @@
 		7A8555302033843500346D53 /* AfterTax.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AfterTax.xcdatamodel; sourceTree = "<group>"; };
 		7A855537203389FB00346D53 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		7A85553920338BFB00346D53 /* AfterTaxConvinience+Initializers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AfterTaxConvinience+Initializers.swift"; sourceTree = "<group>"; };
+		B92EABFE2131CDA200FDAB60 /* SingleSalary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSalary.swift; sourceTree = "<group>"; };
+		B92EAC002131CDB600FDAB60 /* MarriedSalary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarriedSalary.swift; sourceTree = "<group>"; };
+		B92EAC022131CDD200FDAB60 /* SingleSalaryNoStateTax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSalaryNoStateTax.swift; sourceTree = "<group>"; };
+		B92EAC042131CE3400FDAB60 /* MarriedSalaryNoStateTaxes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarriedSalaryNoStateTaxes.swift; sourceTree = "<group>"; };
+		B92EAC082131D22700FDAB60 /* Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		B92EAC0A2131D26B00FDAB60 /* PickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		B92EAC0C2131D4F000FDAB60 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		B92EAC102131D87300FDAB60 /* ReceiptConstraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptConstraints.swift; sourceTree = "<group>"; };
+		B92EAC122131D89500FDAB60 /* ReceiptAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptAnimations.swift; sourceTree = "<group>"; };
 		B96AD0E01FFADEB400730C95 /* AfterTax.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AfterTax.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96AD0E31FFADEB400730C95 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B96AD0E81FFADEB400730C95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +57,9 @@
 		B96AD0FF1FFC37C400730C95 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B96AD1011FFC37FD00730C95 /* TaxPayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxPayer.swift; sourceTree = "<group>"; };
 		B96AD1031FFC384100730C95 /* TaxpayerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaxpayerController.swift; sourceTree = "<group>"; };
+		B9AC32F52131C7DF003E9B81 /* MarriedTaxpayerExtenstion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarriedTaxpayerExtenstion.swift; sourceTree = "<group>"; };
+		B9AC32F72131C817003E9B81 /* Married&NoSateTaxExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Married&NoSateTaxExtension.swift"; sourceTree = "<group>"; };
+		B9AC32F92131C869003E9B81 /* Single&NoStateTaxExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Single&NoStateTaxExtension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +84,10 @@
 		7A8555332033870B00346D53 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B96AD0E71FFADEB400730C95 /* Main.storyboard */,
+				B92EAC072131D1F200FDAB60 /* MainViewController */,
+				B92EAC0E2131D7C900FDAB60 /* ReceiptView */,
 				B96AD0FF1FFC37C400730C95 /* DetailViewController.swift */,
-				B96AD0FD1FFC37A700730C95 /* MainViewController.swift */,
-				7A0C2B4B202E13C1003860CC /* ReceiptViewController.swift */,
+				B96AD0E71FFADEB400730C95 /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -91,8 +115,52 @@
 			isa = PBXGroup;
 			children = (
 				B96AD1031FFC384100730C95 /* TaxpayerController.swift */,
+				B9AC32F92131C869003E9B81 /* Single&NoStateTaxExtension.swift */,
+				B9AC32F52131C7DF003E9B81 /* MarriedTaxpayerExtenstion.swift */,
+				B9AC32F72131C817003E9B81 /* Married&NoSateTaxExtension.swift */,
+				B92EABFB2131CA9A00FDAB60 /* SalaryWorkers */,
 			);
 			name = ModelControllers;
+			sourceTree = "<group>";
+		};
+		B92EABFB2131CA9A00FDAB60 /* SalaryWorkers */ = {
+			isa = PBXGroup;
+			children = (
+				B92EABFE2131CDA200FDAB60 /* SingleSalary.swift */,
+				B92EAC002131CDB600FDAB60 /* MarriedSalary.swift */,
+				B92EAC022131CDD200FDAB60 /* SingleSalaryNoStateTax.swift */,
+				B92EAC042131CE3400FDAB60 /* MarriedSalaryNoStateTaxes.swift */,
+			);
+			path = SalaryWorkers;
+			sourceTree = "<group>";
+		};
+		B92EAC062131D18600FDAB60 /* Views & ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7A8555332033870B00346D53 /* Views */,
+			);
+			name = "Views & ViewControllers";
+			sourceTree = "<group>";
+		};
+		B92EAC072131D1F200FDAB60 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B96AD0FD1FFC37A700730C95 /* MainViewController.swift */,
+				B92EAC082131D22700FDAB60 /* Constraints.swift */,
+				B92EAC0A2131D26B00FDAB60 /* PickerView.swift */,
+				B92EAC0C2131D4F000FDAB60 /* Animations.swift */,
+			);
+			name = MainViewController;
+			sourceTree = "<group>";
+		};
+		B92EAC0E2131D7C900FDAB60 /* ReceiptView */ = {
+			isa = PBXGroup;
+			children = (
+				7A0C2B4B202E13C1003860CC /* ReceiptViewController.swift */,
+				B92EAC102131D87300FDAB60 /* ReceiptConstraints.swift */,
+				B92EAC122131D89500FDAB60 /* ReceiptAnimations.swift */,
+			);
+			path = ReceiptView;
 			sourceTree = "<group>";
 		};
 		B96AD0D71FFADEB300730C95 = {
@@ -117,7 +185,7 @@
 				7A855536203388EF00346D53 /* ModelControllers */,
 				7A8555352033889000346D53 /* CoreData&Friends */,
 				7A8555342033875E00346D53 /* LaunchScreen */,
-				7A8555332033870B00346D53 /* Views */,
+				B92EAC062131D18600FDAB60 /* Views & ViewControllers */,
 				7A855532203386DC00346D53 /* Models */,
 				B96AD0E31FFADEB400730C95 /* AppDelegate.swift */,
 				B96AD0EA1FFADEB400730C95 /* Assets.xcassets */,
@@ -199,14 +267,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0C2B4C202E13C1003860CC /* ReceiptViewController.swift in Sources */,
+				B92EAC032131CDD200FDAB60 /* SingleSalaryNoStateTax.swift in Sources */,
+				B92EAC0B2131D26B00FDAB60 /* PickerView.swift in Sources */,
 				B96AD1021FFC37FD00730C95 /* TaxPayer.swift in Sources */,
+				B9AC32FA2131C869003E9B81 /* Single&NoStateTaxExtension.swift in Sources */,
 				7A8555312033843500346D53 /* AfterTax.xcdatamodeld in Sources */,
+				B9AC32F62131C7DF003E9B81 /* MarriedTaxpayerExtenstion.swift in Sources */,
 				7A855538203389FB00346D53 /* CoreDataStack.swift in Sources */,
 				B96AD0FE1FFC37A700730C95 /* MainViewController.swift in Sources */,
+				B92EAC092131D22700FDAB60 /* Constraints.swift in Sources */,
+				B9AC32F82131C817003E9B81 /* Married&NoSateTaxExtension.swift in Sources */,
+				B92EABFF2131CDA200FDAB60 /* SingleSalary.swift in Sources */,
+				B92EAC112131D87300FDAB60 /* ReceiptConstraints.swift in Sources */,
 				B96AD1041FFC384100730C95 /* TaxpayerController.swift in Sources */,
+				B92EAC0D2131D4F000FDAB60 /* Animations.swift in Sources */,
 				B96AD0E41FFADEB400730C95 /* AppDelegate.swift in Sources */,
 				B96AD1001FFC37C400730C95 /* DetailViewController.swift in Sources */,
+				B92EAC052131CE3400FDAB60 /* MarriedSalaryNoStateTaxes.swift in Sources */,
+				B92EAC012131CDB600FDAB60 /* MarriedSalary.swift in Sources */,
 				7A85553A20338BFB00346D53 /* AfterTaxConvinience+Initializers.swift in Sources */,
+				B92EAC132131D89500FDAB60 /* ReceiptAnimations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

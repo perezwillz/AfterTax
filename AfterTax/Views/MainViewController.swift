@@ -8,21 +8,34 @@
 
 import UIKit
 
+import SpriteKit
 
 class MainViewController: UIViewController{
     
+  
+    @IBOutlet var randomFactView: UIView!
+    @IBOutlet weak var funFactTextLabel: UILabel!
+    @IBOutlet weak var okFactButton: UIButton!
+    @IBAction func okFactButtonPressed(_ sender: Any) {
+        returnFactModalView()
+    }
+   
+    //ShakedeviceForFact
+    override func motionBegan(_ motion: UIEventSubtype, with event: UIEvent?) {
+        bringRamdomModalView()
+    }
     
     static let shared = MainViewController()
     var isHourlyPay : Bool = true
     let receipt = ReceiptViewController.shared
     let data = TaxPayerController.shared
     var single : Bool = true
- 
+    
+    
     //W-4 Switches
     @IBOutlet weak var marriedSwitch: UISwitch!
     @IBAction func marriedSwitchToggled(_ sender: UISwitch) {
-        
-        
+      
         if (sender.isOn == true) {
             single = false
         }else {
@@ -66,9 +79,8 @@ class MainViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         marriedSwitch.isOn = false
-        
-        
         
         //Edits
         hideSalary()
@@ -90,7 +102,6 @@ class MainViewController: UIViewController{
         
         stateTextFeild.inputView = pickerView
         
-        
         if let StateName = UserDefaults.standard.value(forKey: "state") as? String{
             stateTextFeild.text = StateName
         }
@@ -98,8 +109,6 @@ class MainViewController: UIViewController{
         if let federallAllowance = UserDefaults.standard.value(forKey: "federalAllowance") as? String{
             federalAllowanceTextFeild.text = federallAllowance
         }
-        
-        
         
     }
     @IBOutlet weak var amount: UIButton!
@@ -404,310 +413,4 @@ class MainViewController: UIViewController{
                 }else{
                     //Salary,Single,StateWithTax
                     TaxPayerController.shared.CalculateAmountForSingleSalary(hours: hours)
-                }
-                
-            }
-            
-        }
-        
-        
-    }
-    
-    //Constraints
-    func constrainButtons(){
-        //Buttons
-        buttonStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint(item: buttonStackView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.1, constant: 1).isActive = true
-        NSLayoutConstraint(item: buttonStackView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.90, constant: 0).isActive = true
-        NSLayoutConstraint(item: buttonStackView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 0.98, constant: 0).isActive = true
-        NSLayoutConstraint(item: buttonStackView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
-        
-        //numberPad
-        
-        numberPadStackView.translatesAutoresizingMaskIntoConstraints = false
-        //0.42728636
-        NSLayoutConstraint(item: numberPadStackView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 0.84, constant: 1).isActive = true
-        NSLayoutConstraint(item: numberPadStackView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 1).isActive = true
-        NSLayoutConstraint(item: numberPadStackView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.42728636, constant: 1).isActive = true
-        NSLayoutConstraint(item: numberPadStackView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.95, constant: 1).isActive = true
-        
-        
-        //Zero
-        
-        numberLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        NSLayoutConstraint(item: numberLabel, attribute: .bottom, relatedBy: .equal, toItem: numberPadStackView, attribute: .top, multiplier: 1, constant: 1).isActive = true
-        NSLayoutConstraint(item: numberLabel, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 1).isActive = true
-        
-        NSLayoutConstraint(item: numberLabel, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.80, constant: 1).isActive = true
-        
-        
-        
-        
-        NSLayoutConstraint(item: numberLabel, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.18, constant: 1).isActive = true
-        
-        //HouryRateLabel
-        hourlyRateLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint(item: hourlyRateLabel, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 1).isActive = true
-        NSLayoutConstraint(item: hourlyRateLabel, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.07, constant: 1).isActive = true
-        NSLayoutConstraint(item: hourlyRateLabel, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.7, constant: 1).isActive = true
-        NSLayoutConstraint(item: hourlyRateLabel, attribute: .bottom, relatedBy: .equal, toItem: numberLabel, attribute: .top, multiplier: 0.80, constant: 1).isActive = true
-        
-        
-        
-        //HourlyAndSalary
-        hourlyAndSalaryView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint(item: hourlyAndSalaryView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.06, constant: 0).isActive = true
-        NSLayoutConstraint(item: hourlyAndSalaryView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.375, constant: 0).isActive = true
-        NSLayoutConstraint(item: hourlyAndSalaryView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: hourlyAndSalaryView, attribute: .bottom, relatedBy: .equal, toItem: hourlyRateLabel, attribute: .top, multiplier: 1, constant: 0).isActive = true
-        
-        
-        taxButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint(item: taxButton, attribute: .trailing, relatedBy: .equal, toItem: hourlyAndSalaryView, attribute: .leading, multiplier: 0.4, constant: 1).isActive = true
-        //        NSLayoutConstraint(item: taxButton, attribute: .top, relatedBy: .equal, toItem: hourlyAndSalaryView, attribute: .top, multiplier: 1, constant: 0).isActive = true
-        //
-        
-        NSLayoutConstraint(item: taxButton, attribute: .centerY, relatedBy: .equal, toItem: hourlyAndSalaryView, attribute: .centerY, multiplier: 1, constant: 0).isActive = true
-        
-        NSLayoutConstraint(item: taxButton, attribute:.height , relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.05, constant: 1).isActive = true
-        
-        
-        //Salarylabel
-        salaryAmountLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint(item: salaryAmountLabel, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.7, constant: 0).isActive = true
-        
-        NSLayoutConstraint(item: salaryAmountLabel, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.05, constant: 0).isActive = true
-        
-        NSLayoutConstraint(item: salaryAmountLabel, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 0).isActive = true
-        
-        NSLayoutConstraint(item: salaryAmountLabel, attribute: .bottom, relatedBy: .equal, toItem: numberDigitLabel, attribute: .top, multiplier: 0.75, constant: 1).isActive = true
-        
-        
-        //HoursLabel
-        
-        hoursLabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint(item: hoursLabel, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.7, constant: 0).isActive = true
-        NSLayoutConstraint(item: hoursLabel, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.04, constant: 0).isActive = true
-        NSLayoutConstraint(item: hoursLabel, attribute: .bottom, relatedBy: .equal, toItem: numberPadStackView, attribute: .top, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: hoursLabel, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 0.8, constant: 0).isActive = true
-        
-        
-        //Dollarlabel
-        dollarSign.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint(item: dollarSign, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.09, constant: 0).isActive = true
-        
-        NSLayoutConstraint(item: dollarSign, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.089, constant: 0).isActive = true
-        
-        NSLayoutConstraint(item: dollarSign, attribute: .leading, relatedBy: .equal, toItem: taxButton, attribute: .leading, multiplier: 1, constant: 0).isActive = true
-        
-        NSLayoutConstraint(item: dollarSign, attribute: .centerY, relatedBy: .equal, toItem: numberLabel, attribute: .centerY, multiplier: 1, constant: -30).isActive = true
-        
-        
-        //calculatingHourtlyPay
-        
-        enterHourlyButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint(item: enterHourlyButton, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1, constant: 1).isActive = true
-        NSLayoutConstraint(item: enterHourlyButton, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 0.07, constant: 1).isActive = true
-        NSLayoutConstraint(item: enterHourlyButton, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 0.4, constant: 1).isActive = true
-        NSLayoutConstraint(item: enterHourlyButton, attribute: .bottom, relatedBy: .equal, toItem: numberLabel, attribute: .top, multiplier: 0.80, constant: 1).isActive = true
-        
-        //blurView
-        
-        blurView.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        NSLayoutConstraint(item: blurView, attribute: .top, relatedBy: .equal, toItem: view, attribute: .top, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: blurView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: blurView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1, constant: 0).isActive = true
-        NSLayoutConstraint(item: blurView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1, constant: 1).isActive = true
-        
-        
-    }
-    
-}
-
-extension MainViewController {
-    //W-4 View
-    //Hourly View
-    
-    
-    func giveViewsBorders(){
-        
-        
-        marriedView.layer.cornerRadius = 12
-        marriedView.layer.borderWidth = 1.5
-        marriedView.layer.borderColor = #colorLiteral(red: 0.2078431373, green: 0.7215686275, blue: 0.1411764706, alpha: 1)
-        
-        stateView.layer.cornerRadius = 12
-        stateView.layer.borderWidth = 1.5
-        stateView.layer.borderColor = #colorLiteral(red: 0.2078431373, green: 0.7215686275, blue: 0.1411764706, alpha: 1)
-        
-        FederalView.layer.cornerRadius = 12
-        FederalView.layer.borderWidth = 1.5
-        FederalView.layer.borderColor = #colorLiteral(red: 0.2078431373, green: 0.7215686275, blue: 0.1411764706, alpha: 1)
-        
-        StateAllowanceView.layer.cornerRadius = 12
-        StateAllowanceView.layer.borderWidth = 1.5
-        StateAllowanceView.layer.borderColor = #colorLiteral(red: 0.2078431373, green: 0.7215686275, blue: 0.1411764706, alpha: 1)
-        
-    }
-    
-    func bringOutW4ModalView(){
-        
-        UIView.animate(withDuration: 0.4) {
-            self.view.addSubview(self.w4View)
-            
-        }
-        blurView.isHidden = false
-        w4View.center = view.center
-        w4View.layer.cornerRadius = 15
-        w4View.layer.shadowColor = UIColor.black.cgColor
-        w4View.layer.shadowOpacity = 0.5
-        w4View.layer.shadowOffset = CGSize.zero
-        w4View.layer.shadowRadius = 5
-        w4View.layer.cornerRadius = 8
-        
-    }
-    
-    func returnW4ModalView(){
-        
-        UIView.animate(withDuration: 0.4) {
-            self.w4View.removeFromSuperview()
-            self.blurView.isHidden = true
-        }
-    }
-    
-    func bringOutHourlyModalView(){
-        
-        UIView.animate(withDuration: 0.4) {
-            self.view.addSubview(self.hourlyRateModalView)
-            
-        }
-        blurView.isHidden = false
-        hourlyRateModalView.center = view.center
-        hourlyRateModalView.layer.cornerRadius = 15
-        hourlyRateModalView.layer.shadowColor = UIColor.black.cgColor
-        hourlyRateModalView.layer.shadowOpacity = 0.5
-        hourlyRateModalView.layer.shadowOffset = CGSize.zero
-        hourlyRateModalView.layer.shadowRadius = 5
-        hourlyRateModalView.layer.cornerRadius = 8
-    }
-    
-    func returnHourlyModalView(){
-        UIView.animate(withDuration: 0.4) {
-            self.hourlyRateModalView.removeFromSuperview()
-            self.blurView.isHidden = true
-        }
-        
-    }
-    
-}
-
-extension MainViewController:UIPickerViewDelegate, UIPickerViewDataSource {
-    
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        
-        if pickerView == hourlyPayPickerView{
-            return 2
-            
-        }else {
-            return 1
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        if pickerView == hourlyPayPickerView {
-            if component == 0 {
-                return TaxPayerController.shared.hourlyPayArray.count
-                
-            }else if component == 1 {
-                return TaxPayerController.shared.hourlyPayCentArray.count
-            } else {
-                return 1
-            }
-        }
-        else {
-            return TaxPayerController.shared.arrayOfStates.count
-        }
-        
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        
-        if pickerView == hourlyPayPickerView{
-            if component == 0 {
-                return String(TaxPayerController.shared.hourlyPayArray[row])
-            }else {
-                return String(TaxPayerController.shared.hourlyPayCentArray[row])
-            }
-        }else {
-            return TaxPayerController.shared.arrayOfStates[row]
-        }
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        
-        if pickerView == hourlyPayPickerView{
-            
-            let dollarAmountIndex = pickerView.selectedRow(inComponent: 0)
-            let dollarAmount = TaxPayerController.shared.hourlyPayArray[dollarAmountIndex]
-            
-            let centAmountIndex = pickerView.selectedRow(inComponent: 1)
-            let centAmount = TaxPayerController.shared.hourlyPayCentArray[centAmountIndex]
-            
-            hourlyRateDisplay.text = "$\(dollarAmount).\(centAmount)"
-            
-            
-            pickerView.reloadComponent(1)
-        }else {
-            
-            stateTextFeild.text = TaxPayerController.shared.arrayOfStates[row]
-            stateTextFeild.resignFirstResponder()
-        }
-    }
-    
-    func hideSalary(){
-        //hideSalarythings
-        
-        //Hourly
-        
-        HourlyButton.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-        hoursLabel.text = "Hours"
-        hourlyRateLabel.isHidden = false
-        
-        
-        //salary
-        salaryButton.setTitleColor(#colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1), for: .normal)
-        dollarSign.isHidden = true
-        salaryAmountLabel.isHidden = true
-        enterHourlyButton.isHidden = false
-    }
-    
-    func hideHours(){
-        
-        //Salarybutton
-        salaryButton.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-        dollarSign.isHidden = false
-        salaryAmountLabel.isHidden = false
-        
-        //Hourlybutton
-        HourlyButton.setTitleColor(#colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1), for: .normal)
-        hoursLabel.text = "Annually"
-        hourlyRateLabel.isHidden = true
-        enterHourlyButton.isHidden = true
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
-    }
-}
+                }}}}}

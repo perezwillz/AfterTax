@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,18 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar-symbol-4" translatesAutoresizingMaskIntoConstraints="NO" id="06x-x5-2VM">
-                                <rect key="frame" x="141" y="289" width="92" height="82"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollar-sketched-thin-sign-2" translatesAutoresizingMaskIntoConstraints="NO" id="06x-x5-2VM">
+                                <rect key="frame" x="114" y="260" width="146" height="146"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="92" id="9wG-JE-H49"/>
-                                    <constraint firstAttribute="height" constant="82" id="buG-5T-eav"/>
+                                    <constraint firstAttribute="width" constant="146" id="9wG-JE-H49"/>
+                                    <constraint firstAttribute="height" constant="146" id="buG-5T-eav"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="06x-x5-2VM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="168-Jk-dh3"/>
-                            <constraint firstItem="06x-x5-2VM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-3.5" id="Fc2-2R-myJ"/>
+                            <constraint firstItem="06x-x5-2VM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-0.5" id="Fc2-2R-myJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,6 +40,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="dollar-symbol-4" width="512" height="512"/>
+        <image name="dollar-sketched-thin-sign-2" width="512" height="512"/>
     </resources>
 </document>
