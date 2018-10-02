@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSLog("There was an error when trying to request noor user permission : \(error)")
             }
             if sucess {
-                TaxPayerController.shared.createUserNofification()
+               // TaxPayerController.shared.createUserNofification()
             }
             
         }
