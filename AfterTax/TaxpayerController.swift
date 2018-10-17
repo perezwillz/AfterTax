@@ -31,22 +31,22 @@ class TaxPayerController {
         print(randomFact)
         return randomFact
     }
-    
-    func createUserNofification(){
-        let content = UNMutableNotificationContent()
-        content.title = "Did you Know?"
-        content.body = randomFactMaker()
-        content.sound = UNNotificationSound.default()
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 172800, repeats: true)
-        
-        let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { (error) in
-            print(error as Any)
-        }
-    }
-    
+//
+//    func createUserNofification(){
+//        let content = UNMutableNotificationContent()
+//        content.title = "Did you Know?"
+//        content.body = randomFactMaker()
+//        content.sound = UNNotificationSound.default()
+//
+//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 9999999999999999999999999, repeats: true)
+//
+//        let request = UNNotificationRequest(identifier: "Identifier", content: content, trigger: trigger)
+//
+//        UNUserNotificationCenter.current().add(request) { (error) in
+//            print(error as Any)
+//        }
+//    }
+//
     var isHourlyPay: Bool = true
     
     //Allowances
