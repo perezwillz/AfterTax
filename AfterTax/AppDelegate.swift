@@ -5,7 +5,7 @@
 //  Created by Perez Willie Nwobu on 1/1/18.
 //  Copyright © 2018 Perez Willie Nwobu. All rights reserved.
 //
-
+//remove notifications
 import UIKit
 import UserNotifications
 @UIApplicationMain
