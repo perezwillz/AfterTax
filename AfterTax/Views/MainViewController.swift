@@ -313,6 +313,8 @@ class MainViewController: UIViewController{
         return numberFormatter
     }()
     
+    
+  
     @IBAction func hoursButtonPressed(_ sender: Any) {
         
         guard let hourlyRateText = self.hourlyRateLabel.text,
@@ -347,7 +349,7 @@ class MainViewController: UIViewController{
         TaxPayerController.shared.federalAllowance = federalAllowance
         TaxPayerController.shared.stateAllowance = stateAllowance
         
-        
+     
         if hourlyRateLabel.isHidden == false{
             TaxPayerController.shared.isHourlyPay = true
             //Then this is definatly HourlyPay
