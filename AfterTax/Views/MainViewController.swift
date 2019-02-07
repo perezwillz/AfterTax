@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 import SpriteKit
 
 class MainViewController: UIViewController{
@@ -40,15 +39,12 @@ class MainViewController: UIViewController{
             single = false
         }else {
             single = true
-            
         }
     }
-    
     
     //ModalViews
     @IBOutlet var w4View: UIView!
     @IBOutlet var hourlyRateModalView: UIView!
-    
     
     //BlurView
     @IBOutlet weak var blurView: UIView!
@@ -76,7 +72,6 @@ class MainViewController: UIViewController{
         returnW4ModalView()
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -99,7 +94,6 @@ class MainViewController: UIViewController{
         hourlyPickerView.dataSource = self
         
         //TextFeild
-        
         stateTextFeild.inputView = pickerView
         
         if let StateName = UserDefaults.standard.value(forKey: "state") as? String{
@@ -109,7 +103,6 @@ class MainViewController: UIViewController{
         if let federallAllowance = UserDefaults.standard.value(forKey: "federalAllowance") as? String{
             federalAllowanceTextFeild.text = federallAllowance
         }
-        
     }
     @IBOutlet weak var amount: UIButton!
     
@@ -125,18 +118,12 @@ class MainViewController: UIViewController{
     @IBOutlet weak var dot: UIButton!
     @IBOutlet weak var zero: UIButton!
     @IBOutlet weak var cancel: UIButton!
-    
-    
     @IBOutlet weak var numberLabel: UILabel!
-    
     @IBOutlet weak var salaryAmountLabel: UILabel!
     @IBOutlet weak var hoursLabel: UILabel!
     
-    
     @IBOutlet weak var HourlyButton: UIButton!
     @IBOutlet weak var salaryButton: UIButton!
-    
-    
     @IBOutlet weak var enterHourlyButton: UIButton!
     
     
@@ -145,25 +132,19 @@ class MainViewController: UIViewController{
     @IBOutlet weak var hourlyAndSalaryView: UIStackView!
     @IBOutlet weak var taxButton: UIButton!
     
-    
     @IBOutlet weak var buttonStackView: UIStackView!
     @IBOutlet weak var numberPadStackView: UIStackView!
     @IBOutlet weak var dollarSign: UILabel!
     
-    
-    @IBAction func HoourlyButtonTapped(_ sender: Any) {
-        
+    @IBAction func HourlyButtonTapped(_ sender: Any) {
         hideSalary()
-        
     }
     @IBAction func salaryButtonTapped(_ sender: Any) {
-        
         hideHours()
     }
     
     @IBAction func enterHourlyButtonTapped(_ sender: Any) {
         //bring out hourlt calculator stack view
-        
         bringOutHourlyModalView()
     }
     
@@ -180,7 +161,6 @@ class MainViewController: UIViewController{
         hourlyRateLabel.text = hourlyRateDisplay.text
         returnHourlyModalView()
     }
-    
     
     
     @IBAction func OneButtonPressed(_ sender: Any) {
@@ -212,7 +192,6 @@ class MainViewController: UIViewController{
         }
     }
     @IBAction func fourButtonPressed(_ sender: Any) {
-        
         
         if numberLabel.text == "0" {
             numberLabel.text = "4"
@@ -279,10 +258,7 @@ class MainViewController: UIViewController{
     }
     
     @IBAction func dotbuttonPressed(_ sender: Any) {
-        
         if numberLabel.text != "0" {
-            //numberLabel.text = "."
-            //check if it does not contain ".", if it does, return
             let number = "."
             
             let textCurrentltyInDisplay = numberLabel.text

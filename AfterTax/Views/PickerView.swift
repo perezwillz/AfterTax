@@ -73,12 +73,11 @@ extension MainViewController:UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func hideSalary(){
-        //hideSalarythings
-        
+     
         //Hourly
         
         HourlyButton.setTitleColor(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1), for: .normal)
-        hoursLabel.text = "Hours"
+        hoursLabel.text = "Hrs/Week"
         hourlyRateLabel.isHidden = false
         
         

@@ -35,11 +35,6 @@ class ReceiptViewController: UIViewController {
     
     @IBOutlet weak var blurryView: UIView!
     
-    
-    
-    
-    
-    
     @IBAction func taxCutButton(_ sender: Any) {
         bringOutModalView()
     }
@@ -127,7 +122,6 @@ class ReceiptViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-       //  makeTaxCutButtonBounce()
         animateViews()
     }
     
@@ -140,7 +134,6 @@ class ReceiptViewController: UIViewController {
         
         giveRemoveViewbuttonShadows()
         giveTaxCutButtonsShadows()
-        
         
         //FIX ME- Make button able to work even when its bouncing
         //makeTaxCutButtonBounce()
@@ -211,8 +204,6 @@ class ReceiptViewController: UIViewController {
             monthlyPay.text = monthlyString
             annualPay.text = yearlyString
             
-        
-            
         }else {
             print("This is salary")
             let weekly = NSNumber(floatLiteral: TaxPayerController.shared.cashAfterTax / 52.0)
@@ -231,16 +222,7 @@ class ReceiptViewController: UIViewController {
             biWeeklyPay.text = biWeeklyString
             monthlyPay.text = monthlyString
             annualPay.text = yearlyString
-            
-            print("Your weekly paycheck is \(weeklyString)")
-            print("Your Bi-weekly paycheck is \(biWeeklyString)")
-            print("Your Monthly paycheck is \(monthlyString)")
-            print("Your yearly paycheck is \(yearlyString)")
-            
-            print(weeklyString)
-            print(biWeeklyString)
-            print(monthlyString)
-            print(yearlyString)
+           
         }
         
     }
