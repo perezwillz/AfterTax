@@ -135,7 +135,6 @@ extension ReceiptViewController {
     
     @objc func changeLabel(){
         index += 1
-        
         if index <= 3 {
             calculationUpdateLabel.text = TaxPayerController.shared.arrayOfLoadingLabels[index]
         }else {
@@ -144,7 +143,7 @@ extension ReceiptViewController {
     }
     
     func removeShapeLayer(){
-        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(ReceiptViewController.shapeLayerHidden), userInfo: nil, repeats: false)
+        timer = Timer.scheduledTimer(timeInterval: 1.6, target: self, selector: #selector(ReceiptViewController.shapeLayerHidden), userInfo: nil, repeats: false)
     }
     
     @objc func shapeLayerHidden(){

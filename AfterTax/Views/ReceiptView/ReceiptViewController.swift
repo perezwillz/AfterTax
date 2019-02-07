@@ -76,7 +76,6 @@ class ReceiptViewController: UIViewController {
         losdingView.isHidden = true
     }
     
-    
     @IBAction func receiptButtonPressed(_ sender: Any) {
         losdingView.isHidden = true
     }
@@ -222,9 +221,7 @@ class ReceiptViewController: UIViewController {
             biWeeklyPay.text = biWeeklyString
             monthlyPay.text = monthlyString
             annualPay.text = yearlyString
-           
         }
-        
     }
     
     @IBAction func backButtonPressed(_ sender: Any) {
