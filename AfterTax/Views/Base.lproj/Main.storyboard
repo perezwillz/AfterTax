@@ -867,8 +867,8 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRc-a3-YJV" userLabel="Medicare">
                                                 <rect key="frame" x="0.0" y="213" width="343" height="61"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicaid:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-lu-Qjl">
-                                                        <rect key="frame" x="8" y="16.5" width="100.5" height="28"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medicare:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="bSS-lu-Qjl" userLabel="Medicare:">
+                                                        <rect key="frame" x="8" y="16.5" width="101.5" height="28"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="28" id="TFU-vn-4Bn"/>
                                                         </constraints>
@@ -877,7 +877,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="$28.94" textAlignment="right" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="UNl-k9-PIV">
-                                                        <rect key="frame" x="116.5" y="15.5" width="218.5" height="30"/>
+                                                        <rect key="frame" x="117.5" y="15.5" width="217.5" height="30"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="YRY-ne-GKu"/>
                                                         </constraints>
@@ -1038,6 +1038,7 @@
                         <outlet property="losdingView" destination="S2I-j1-Ta3" id="P4J-Pr-JU4"/>
                         <outlet property="medicAid" destination="Gdo-E8-pZi" id="fyl-gH-WeL"/>
                         <outlet property="medicAidTaxFeild" destination="UNl-k9-PIV" id="dgE-SE-kPN"/>
+                        <outlet property="medicareLabel" destination="bSS-lu-Qjl" id="Uma-LH-lzR"/>
                         <outlet property="monthlyPay" destination="H6T-cf-DfX" id="kbV-fm-Rz4"/>
                         <outlet property="monthlyView" destination="dbq-GC-w1c" id="KRD-W6-cDV"/>
                         <outlet property="receiptButton" destination="16W-84-aNC" id="m6q-1h-zYN"/>

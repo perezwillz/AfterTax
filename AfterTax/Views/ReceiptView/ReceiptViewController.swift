@@ -25,13 +25,12 @@ class ReceiptViewController: UIViewController {
     @IBOutlet weak var biWeeklyView: UIView!
     @IBOutlet weak var monthlyView: UIView!
     @IBOutlet weak var annualView: UIView!
+    @IBOutlet weak var medicareLabel: UILabel!
     
     @IBOutlet weak var weeklyPay: UILabel!
     @IBOutlet weak var biWeeklyPay: UILabel!
     @IBOutlet weak var monthlyPay: UITextField!
     @IBOutlet weak var annualPay: UITextField!
-    
-    
     
     @IBOutlet weak var blurryView: UIView!
     

@@ -9,7 +9,6 @@
 import Foundation
 import UIKit
 
-
 extension ReceiptViewController {
    //ModalView
     func bringOutModalView(){
@@ -62,7 +61,6 @@ extension ReceiptViewController {
     //Tax cut animations
     func giveViewsBorders(){
         
-        
         weeklyView.layer.cornerRadius = 12
         weeklyView.layer.borderWidth = 1.5
         weeklyView.layer.borderColor = #colorLiteral(red: 0.1882352941, green: 0.8078431373, blue: 0.9843137255, alpha: 1)
@@ -107,7 +105,6 @@ extension ReceiptViewController {
         shapeLayer.lineWidth = 15
         shapeLayer.fillColor = UIColor.clear.cgColor
         shapeLayer.lineCap = kCALineCapRound
-        
         
         shapeLayer.strokeEnd = 0
         

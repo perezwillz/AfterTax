@@ -27,8 +27,6 @@ extension TaxPayerController {
             print("Federal Income tax is = \(federalIncomeTax)")
             federalIncomeTax = federalIncomeTax + 0.00
             
-            
-            
             //State Taxes
             utahStateTax = grossPay * 0.05
             print("Your State tax is = \(utahStateTax)")
