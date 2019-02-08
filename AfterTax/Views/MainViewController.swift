@@ -34,12 +34,13 @@ class MainViewController: UIViewController{
     //W-4 Switches
     @IBOutlet weak var marriedSwitch: UISwitch!
     @IBAction func marriedSwitchToggled(_ sender: UISwitch) {
-      
         if (sender.isOn == true) {
             single = false
         }else {
             single = true
         }
+       UserDefaults.standard.set(single, forKey: "singleValue")
+        
     }
     
     //ModalViews
@@ -72,10 +73,24 @@ class MainViewController: UIViewController{
         returnW4ModalView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        if let singleValue = UserDefaults.standard.value(forKey: "singleValue") as? Bool{
+            single = singleValue
+            
+            marriedSwitch.isOn = single
+        } else {
+            return
+        }
+       
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        marriedSwitch.isOn = false
+        //marriedSwitch.isOn = false
         
         //Edits
         hideSalary()
@@ -325,13 +340,10 @@ class MainViewController: UIViewController{
         TaxPayerController.shared.federalAllowance = federalAllowance
         TaxPayerController.shared.stateAllowance = stateAllowance
         
-     
         if hourlyRateLabel.isHidden == false{
             TaxPayerController.shared.isHourlyPay = true
             //Then this is definatly HourlyPay
             TaxPayerController.shared.hourlyPay = hourlyPay
-            
-            //weeklyPayCheck ()
             
             if marriedSwitch.isOn == true {
                 //HourlyPayAndMarried
