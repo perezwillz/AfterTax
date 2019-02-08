@@ -112,7 +112,7 @@ extension ReceiptViewController {
         
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         
-        basicAnimation.duration = 3
+        basicAnimation.duration = 2
         
         basicAnimation.toValue = 1
         
@@ -126,7 +126,6 @@ extension ReceiptViewController {
     
     
     func editViews(){
-        
         timer = Timer.scheduledTimer(timeInterval: 0.7, target: self, selector: #selector(ReceiptViewController.changeLabel), userInfo: nil, repeats: true)
     }
     
